@@ -20,17 +20,7 @@ var buttoncount = 0;
 var wordcount = 0;
 function sentencefunc() {
     var x = document.getElementById("lang").value;
-    if (x == "null") {
-        alert("Select a language");
-        document.getElementById("ans").innerHTML = "";
-        document.getElementById("demo3").innerHTML = "";
-        document.getElementById("demo4").innerHTML = "";
-        document.getElementById("demo6").innerHTML = "";
-        document.getElementById("demo").innerHTML = "";
-        document.getElementById("demo1").innerHTML = "";
-        return false;
-    }
-    else if (x == "english") {
+    if (x == "english") {
         document.getElementById("ans").innerHTML = " ";
         document.getElementById("demo3").innerHTML = "";
         document.getElementById("demo4").innerHTML = "";
@@ -52,6 +42,9 @@ function sentencefunc() {
         var hindi = hindisentence();
         return hindi;
     }
+    else
+    alert("select language");
+    return false;
 }
 var initialvalues = "";
 function englishsentence() {
@@ -112,6 +105,9 @@ function display(id, value) {
     document.getElementById(id).style.display = "none";
     document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets(initialvalues)'>Re-form the sentence</button></center>"
     wordcount++;
+    if (wordcount == buttoncount) {
+        document.getElementById("demo7").innerHTML = "<center><button id='check' onclick='checkfunc(finishedsentence)'>Check the correctness of sentence</button></center>"
+    }
     return true;
 }
 
@@ -125,3 +121,6 @@ function resets(initialvalues) {
     return true;
 }
 
+function checkfunc() {
+
+}
