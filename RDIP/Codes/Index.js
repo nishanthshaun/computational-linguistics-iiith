@@ -22,12 +22,19 @@ function sentencefunc() {
     var x = document.getElementById("lang").value;
     if (x == "null") {
         alert("Select a language");
+        document.getElementById("ans").innerHTML = "";
+        document.getElementById("demo3").innerHTML = "";
+        document.getElementById("demo4").innerHTML = "";
+        document.getElementById("demo6").innerHTML = "";
+        document.getElementById("demo").innerHTML = "";
+        document.getElementById("demo1").innerHTML = "";
         return false;
     }
     else if (x == "english") {
         document.getElementById("ans").innerHTML = " ";
         document.getElementById("demo3").innerHTML = "";
         document.getElementById("demo4").innerHTML = "";
+        document.getElementById("demo6").innerHTML = "";
         finishedsentence = " ";
         document.getElementById("demo").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
         document.getElementById("demo1").innerHTML = "(select the buttons in proper order)";
@@ -38,6 +45,7 @@ function sentencefunc() {
         document.getElementById("ans").innerHTML = " ";
         document.getElementById("demo3").innerHTML = "";
         document.getElementById("demo4").innerHTML = "";
+        document.getElementById("demo6").innerHTML = "";
         finishedsentence = "";
         document.getElementById("demo").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
         document.getElementById("demo1").innerHTML = "(select the buttons in proper order)";
@@ -45,7 +53,7 @@ function sentencefunc() {
         return hindi;
     }
 }
-
+var initialvalues = "";
 function englishsentence() {
     var subarray1 = parseInt(Math.random() * eng.length);
     var subarray = eng[subarray1][0];
@@ -64,7 +72,9 @@ function englishsentence() {
     for (k = 0; k < ele.length; k++) {
         button = "  <button id='btn" + k + "' onclick='display(this.id,this.value)' value='" + ele[k] + "'>" + ele[k] + "</button>  ";
         spbutton += button + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+        buttoncount += 1;
     }
+    initialvalues = spbutton.trim();
     document.getElementById("ans").innerHTML = spbutton.trim();
     return true;
 }
@@ -87,7 +97,9 @@ function hindisentence() {
     for (c = 0; c < ele1.length; c++) {
         button = "  <button id='btn" + c + "' onclick='display(this.id,this.value)' value='" + ele1[c] + "'>" + ele1[c] + "</button>  ";
         spbutton += button + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+        buttoncount += 1;
     }
+    initialvalues = spbutton.trim();
     document.getElementById("ans").innerHTML = spbutton.trim();
     return true;
 }
@@ -98,8 +110,18 @@ function display(id, value) {
     finishedsentence += value + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
     document.getElementById("demo4").innerHTML = finishedsentence;
     document.getElementById(id).style.display = "none";
-
+    document.getElementById("demo6").innerHTML = "<center><button id='reform' onclick='resets(initialvalues)'>Re-form the sentence</button></center>"
+    wordcount++;
+    return true;
 }
 
-
+function resets(initialvalues) {
+    document.getElementById("demo3").innerHTML = "";
+    document.getElementById("demo4").innerHTML = "";
+    document.getElementById("demo6").innerHTML = "";
+    wordcount = 0;
+    document.getElementById("ans").innerHTML = initialvalues;
+    finishedsentence = "";
+    return true;
+}
 
