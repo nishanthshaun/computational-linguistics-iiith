@@ -23,18 +23,7 @@ var buttoncount = 0;
 var wordcount = 0;
 function sentencefunc() {
     var x = document.getElementById("lang").value;
-    if (x == "null") {
-        alert("Select a language");
-        document.getElementById("ans").innerHTML = "";
-        document.getElementById("demo3").innerHTML = "";
-        document.getElementById("demo4").innerHTML = "";
-        document.getElementById("demo6").innerHTML = "";
-        document.getElementById("demo").innerHTML = "";
-        document.getElementById("demo1").innerHTML = "";
-        document.getElementById("demo7").innerHTML = "";
-        return false;
-    }
-    else if (x == "english") {
+    if (x == "english") {
         document.getElementById("ans").innerHTML = " ";
         document.getElementById("demo3").innerHTML = "";
         document.getElementById("demo4").innerHTML = "";
@@ -66,7 +55,7 @@ function sentencefunc() {
 var originalsentence = "";
 var initialvalues = "";
 function englishsentence() {
-    var subarray1 = parseInt(Math.random() * eng.length);
+    subarray1 = parseInt(Math.random() * eng.length);
     var subarray = eng[subarray1][0];
     var sen = subarray.split(" ");
     var ele = new Array();
@@ -91,8 +80,8 @@ function englishsentence() {
 }
 
 function hindisentence() {
-    var subarray3 = parseInt(Math.random() * hin.length);
-    var sub = hin[subarray3][0];
+    subarray1 = parseInt(Math.random() * hin.length);
+    var sub = hin[subarray1][0];
     var sen1 = sub.split(" ");
     var ele1 = new Array();
     while (ele1.length < sen1.length) {
@@ -136,6 +125,8 @@ function resets(initialvalues) {
     document.getElementById("demo7").innerHTML = "";
     document.getElementById("demo8").innerHTML = "";
     document.getElementById("demo9").innerHTML = "";
+    document.getElementById("demo10").innerHTML = "";
+    document.getElementById("demo11").innerHTML = "";
     wordcount = 0;
     document.getElementById("ans").innerHTML = initialvalues;
     finishedsentence = "";
@@ -155,4 +146,37 @@ function checkfunc() {
         }
     }
     document.getElementById('demo9').innerHTML = "WRONG ANSWER";
+    document.getElementById("demo10").innerHTML = "<center><button id='showansbtn' onclick='answers()'>Get Correct Sentence</button></center>"
+}
+function answers() {
+    answer = "";
+    document.getElementById("demo11").innerHTML = ""
+    var correctanswers = 0;
+    var x = document.getElementById("lang").value;
+    if (x == "english") {
+        correctanswers = eng[subarray1].length;
+        document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>Hide correct answer</button></center>"
+        for (var i = 0; i < correctanswers; i++) {
+            answer += "<center>" + eng[subarray1][i] + "</br></center>"
+        }
+        document.getElementById("demo11").innerHTML = answer;
+    }
+    else if (x == "hindi") {
+        correctanswers = hin[subarray1].length;
+        document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>Hide correct answer</button></center>"
+        for (var j = 0; j < correctanswers; j++) {
+            answer += "<center>" + hin[subarray1][j] + "</br></center>"
+        }
+        document.getElementById("demo11").innerHTML = answer;
+    }
+}
+function hides() {
+    document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='tooglefunc()'>Get correct answer</button></center>"
+    document.getElementById("demo11").innerHTML = "";
+}
+function tooglefunc() {
+    while (document.getElementById("demo11").innerHTML == "") {
+        document.getElementById("demo10").innerHTML = "<center><button id='showansbtn1' onclick='hides()'>Hide correct answer</button></center>"
+        document.getElementById("demo11").innerHTML = answer;
+    }
 }

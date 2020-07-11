@@ -46,8 +46,9 @@ font-style:bold;
 }
 #demo4
 {
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 text-align:center;
-font-size:20px;
+font-size: 25px;
 font-style:bold;
 }
 #demo8
@@ -62,5 +63,12 @@ font-size:20px;
 text-align:center;
 color:red;
 font-size:20px;
+font-style:bold;
+}
+#demo11
+{
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+text-align:center;
+font-size: 25px;
 font-style:bold;
 }
