@@ -1,7 +1,17 @@
 h1
 {
+top: 0px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 font-size:50px;
 font-style:bold;
+text-align: center;
+background-color: black;
+color: white;
+}
+h2
+{
+font-family: serif;
+font-size: 40px;
 }
 #lang{
 position:relative;
@@ -14,6 +24,7 @@ height:50px;
 }
 #demo
 {
+font-family: 'Times New Roman', Times, serif;
 color:darkblue;
 font-size:29px;
 text-align:center;
@@ -27,9 +38,13 @@ font-style:italic;
 }
 #ans
 {
+text-align: center;
+font-family: serif;
 position:absolute;
 left:35%;
 right:auto;
+font-size: 20px;
+transition: 0.3s;
 }
 #display
 {
@@ -39,6 +54,7 @@ right:auto;
 }
 #demo3
 {
+font-family: serif;
 color:blue;
 text-align:center;
 font-size:30px;
@@ -47,23 +63,42 @@ font-style:bold;
 #demo4
 {
 font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-text-align:center;
+text-align: center;
 font-size: 25px;
 font-style:bold;
+}
+#demo6
+{
+font-size: 20px;
+font-family: serif;
+}
+#demo7
+{
+font-size: 20px;
+font-family: serif;
 }
 #demo8
 {
 text-align:center;
-color:green;
+background-color:green;
+color: white;
 font-style:bold;
-font-size:20px;
+font-size:30px;
+font-family: serif;
 }
 #demo9
 {
 text-align:center;
-color:red;
-font-size:20px;
+background-color:red;
+color: white;
+font-size:30px;
 font-style:bold;
+font-family: serif;
+}
+#demo10
+{
+font-size: 20px ;
+font-family: serif;
 }
 #demo11
 {

@@ -21,7 +21,8 @@ var combinedarray = ["राम और श्याम बाजार गये
 
 var buttoncount = 0;
 var wordcount = 0;
-function sentencefunc() {
+function sentencefunc() 
+{
     var x = document.getElementById("lang").value;
     if (x == "english") {
         document.getElementById("ans").innerHTML = " ";
@@ -31,9 +32,8 @@ function sentencefunc() {
         document.getElementById("demo7").innerHTML = "";
         finishedsentence = " ";
         document.getElementById("demo").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
-        document.getElementById("demo1").innerHTML = "(select the buttons in proper order)";
-        var english = englishsentence();
-        return english;
+        document.getElementById("demo1").innerHTML = "(Select the buttons in proper order)";
+        return englishsentence();
     }
     else if (x == "hindi") {
         document.getElementById("ans").innerHTML = " ";
@@ -43,9 +43,8 @@ function sentencefunc() {
         document.getElementById("demo7").innerHTML = "";
         finishedsentence = "";
         document.getElementById("demo").innerHTML = "Form a sentence (Declarative or Interrogative or any other type) from the given words";
-        document.getElementById("demo1").innerHTML = "(select the buttons in proper order)";
-        var hindi = hindisentence();
-        return hindi;
+        document.getElementById("demo1").innerHTML = "(Select the buttons in proper order)";
+        return hindisentence();
     }
     else {
         alert("select language");
@@ -140,12 +139,12 @@ function checkfunc() {
         var n = str1.localeCompare(str);
         console.log(j, str1.localeCompare(str), str, str.length, str1, str1.length)
         if (n == 0) {
-            document.getElementById("demo8").innerHTML = "RIGHT ANSWER";
+            document.getElementById("demo8").innerHTML = "RIGHT ANSWER!!!";
 
             return;
         }
     }
-    document.getElementById('demo9').innerHTML = "WRONG ANSWER";
+    document.getElementById('demo9').innerHTML = "WRONG ANSWER!!!";
     document.getElementById("demo10").innerHTML = "<center><button id='showansbtn' onclick='answers()'>Get Correct Sentence</button></center>"
 }
 function answers() {
