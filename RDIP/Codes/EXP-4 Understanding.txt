@@ -1,0 +1,8 @@
+This experiment is about finding number of words in the selected corpus and also to find nuber of unique words in the corpus.
+There is a function in this experiment that finds out how many words are there in the selected corpus.
+Another function is it finds out number of unique words in the corpus.
+The submit button is presen at the bottom which onclick invokes a function.
+That checks whether the given input by user matches the number of tokens and types in the function if matches we have to print correct answer other wise wrong answer.
+In order to select the corpus ther is a drop down menu which allows to select different paragraph for each corpus selected.
+There is also one mores function which will be invoked only if the given answers are correct.
+If the answers are correct then a function is invoked which display a input box which we have to enter the new types that is the number of root words used in the corpus.
