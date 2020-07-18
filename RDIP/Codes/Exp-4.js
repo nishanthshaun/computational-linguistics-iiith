@@ -156,4 +156,12 @@ function comparefunc(res) {
     else {
         document.getElementById("demo2").innerHTML = "wrong answer";
     }
+function rootsfunc() {
+    document.getElementById("sub").innerHTML = "Now, consider all the tokens with the same 'root' word to be of the same type. Recalculate the number of types."
+    document.getElementById("demo2").innerHTML = "#newtypes";
+    var input = '<input type="text" id="newtype">'
+    document.getElementById("root").innerHTML = input;
+    var button = '<button id="newtype" onclick = "newtypes">submit</button>'
+    document.getElementById("button").innerHTML = button; 
+}
 }
