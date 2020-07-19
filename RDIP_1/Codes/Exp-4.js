@@ -250,12 +250,12 @@ function newtypes(ele)
         var length2 = unique.length;
         if (value1 == length2) {
             document.getElementById("newtype").style.backgroundColor = "green";
-            document.getElementById("demo4").innerHTML = "RIGHT ANSWER";
+            document.getElementById("demo4").innerHTML = "RIGHT ANSWER!!!";
             document.getElementById("demo4").style.backgroundColor = "green";
         }
         else {
             document.getElementById("newtype").style.backgroundColor = "red";
-            document.getElementById("demo4").innerHTML = "WRONG ANSWER";
+            document.getElementById("demo4").innerHTML = "WRONG ANSWER!!!";
             document.getElementById("demo4").style.backgroundColor = "red";
 }
 }

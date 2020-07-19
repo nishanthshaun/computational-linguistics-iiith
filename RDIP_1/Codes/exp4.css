@@ -9,7 +9,6 @@ left:45%;
 #demo
 {
 font-size:20px;
-color:red;
 font-style:bold;
 }
 #demo1
@@ -40,7 +39,29 @@ font-style:bold;
 }
 #demo4
 {
+text-transform: capitalize;
 color:white;
-font-sizee:20px;
+font-size:20px;
 font-style:bold;
 } 
+#submit
+{
+border-radius:8px;
+padding:10px 20px;
+background-color: #e7e7e7; 
+color: black;
+}
+#continue
+{
+border-radius:8px;
+padding:10px 20px;
+background-color: #e7e7e7; 
+color: black;
+}
+#newtypes
+{
+border-radius:8px;
+padding:10px 20px;
+background-color: #e7e7e7; 
+color:black;
+}
