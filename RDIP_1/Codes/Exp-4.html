@@ -1,11 +1,15 @@
 <html>
-<head>
-    <script data-main="exp4.js" src="../Libraries/require.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script defer src="exp4.js"></script>
+    <script src="../Libraries/require.js"></script>
+    <script src="../Libraries/node_modules/snowball/stemmer/lib/Snowball.min.js"></script>
+    <link rel="stylesheet" href="exp4.css">
 </head>
 
 <body>
+    <h1>EXPERIMENT</h1>
     <div id="dropdown">
         <select id="corpus" onchange="corpusfunc()">
             <option value="null">---Select a corpus---</option>
@@ -15,28 +19,44 @@
         </select>
     </div>
     <div id="display">
-        <p id="demo"></p>
-        <p id="demo1"></p>
+        <center>
+            <p id="demo"></p>
+        </center>
+        <center>
+            <p id="demo1"></p>
+        </center>
     </div>
     <div id="tab">
-        <table id="tab1" border="1">
+        <center>
+            <table id="tab1" border="1">
 
-        </table>
+            </table>
+        </center>
     </div>
     <br>
-    <div id="sub">
-    </div>
+    <center>
+        <div id="sub">
+        </div>
+    </center>
     <div id="check">
-        <p id="demo2"></p>
+        <center>
+            <p id="demo2"></p>
+        </center>
+        <center>
+            <p id="demo3"></p>
+        </center>
     </div>
     <div id="root">
+    </div>
+    <div id="roots">
     </div>
     </br>
     <div id="button">
     </div>
-    <div id="types">
+    <br>
+    <center>
         <p id="demo4"></p>
-    </div>
+    </center>
 </body>
 
 </html>
